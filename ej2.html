@@ -1,19 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Media query - Teléfono</title>
-  <style>
-    #telefono{
-      font-size: 32px;
-      font-weight: bold;
-      position: fixed;
-    }
-  </style>
-</head>
-<body>
-  <div id="telefono">987 65 43 21</div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media query - Teléfono</title>
+    <style>
+      #telefono {
+        font-size: 32px;
+        font-weight: bold;
+        position: fixed;
+      }
+      @media screen and (min-width: 320px),
+        screen and (min-width: 480px),
+        screen and (min-width: 768px) {
+        #telefono {
+          bottom: 0;
+        }
+        body {
+          display: flex;
+          justify-content: center;
+        }
+      }
+      @media screen and (min-width: 992px), screen and (min-width: 1200px) {
+        #telefono {
+          top: 0;
+        }
+        body {
+          display: flex;
+          justify-content: right;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="telefono">987 65 43 21</div>
+  </body>
 </html>
